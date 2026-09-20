@@ -39,7 +39,21 @@ FV＋CTA → なぜAIで事業を作ると自由を目指せるのか → AIで�
 - 特商法 … https://xenomagic.com/tokushoho.html
 - プライバシーポリシー … https://xenomagic.com/privacy.html
 
+## 公開URL
+https://kumokawa1105-alt.github.io/ai-business-owner-lp/
+
+リポジトリ: https://github.com/kumokawa1105-alt/ai-business-owner-lp （Public / GitHub Pages）
+
 ## 確認
 ```
-open index.html
+open index.html          # ローカル
 ```
+
+## 修正を公開に反映する
+```
+git add -A
+git commit -m "修正内容"
+git push
+```
+push の約1分後に公開URLへ自動反映されます（GitHub Actions の pages build が走る）。
+ブラウザにキャッシュが残る場合は スーパーリロード（Cmd+Shift+R）。
