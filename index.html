@@ -81,15 +81,6 @@ section{padding:30px 28px}
   font-size:11.5px;font-weight:900;display:flex;align-items:center;justify-content:center;
   flex:none;letter-spacing:.02em}
 
-/* ---------- WHY ---------- */
-.why{background:#FAFAFA}
-.why .body{max-width:480px;margin:20px auto 0;font-size:clamp(15px,4.1vw,16.5px);line-height:1.95;color:#2A2A2A}
-.why .body p+p{margin-top:15px}
-.why .body .q{margin-bottom:15px}
-.why .body ul{list-style:none;margin:0 0 15px}
-.why .body ul li{padding-left:1em;text-indent:-1em}
-.why .body b{font-weight:900;color:var(--teal-d)}
-
 /* ---------- 実績 / 実践者の結果 ---------- */
 .rs .h2{margin-bottom:32px}
 .rs .grp{max-width:480px;margin:0 auto}
@@ -119,6 +110,7 @@ section{padding:30px 28px}
 .rs .note{font-size:12px;color:#777;line-height:1.8;margin:16px auto 0;max-width:480px}
 
 /* ---------- 無料講義でわかること ---------- */
+.pt{background:#FAFAFA}
 .pt .h2{margin-bottom:20px}
 .pt ul{list-style:none;max-width:480px;margin:0 auto}
 .pt li{position:relative;padding:11px 2px 11px 38px;border-bottom:1px solid #E3E3E3}
@@ -134,7 +126,6 @@ section{padding:30px 28px}
 .pt .msg b{font-weight:900;color:var(--teal-d)}
 
 /* ---------- profile ---------- */
-.pf{background:#FAFAFA}
 .pf .h2{margin-bottom:20px}
 .pf .head{display:flex;gap:16px;align-items:flex-end;
   border-bottom:3px solid var(--teal);padding-bottom:14px}
@@ -211,28 +202,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
     </div>
   </section>
 
-  <!-- 2. なぜ -->
-  <section class="why">
-    <h2 class="h2"><em>なぜ、AIで事業を作ると<br>自由を目指せるのか？</em></h2>
-    <div class="body">
-      <p class="q">AIを使えるようになって、収入や自由な時間が増えたか、思い返してみてください。</p>
-      <ul>
-        <li>・ChatGPTで文章を作れる</li>
-        <li>・画像や動画、資料も作れる</li>
-        <li>・以前より仕事が速くなった</li>
-      </ul>
-      <p>それなのに</p>
-      <p>「選択肢が増え、逆にやることが増えた」<br>「結局、自分が動かないと何も進まない」</p>
-      <p>このように感じている方も多いのではないでしょうか。</p>
-      <p>そして、AIを使って作業が速くなっても、自分が止まれば事業は止まってしまいます。</p>
-      <p>自由を目指すために必要なのは、「AIの操作をさらに覚えること」ではなく、<b>「AIを使って、利益を生み出す事業そのものを作ること」</b>です。</p>
-      <p>AIに役割と判断基準を渡せば、文章や画像の作成だけでなく、仕事の流れそのものを任せられるようになります。</p>
-      <p><b>つまり「自分が働く」から「AIと仕組みに働いてもらう」へ、事業の動かし方そのものを変えられるのです。</b></p>
-      <p>さらに、自分がいなくても事業が回り、他者へ引き継げる状態まで整えれば、<b>事業を売却するという選択肢</b>も生まれます。</p>
-    </div>
-  </section>
-
-  <!-- 3. 無料講義でわかること -->
+  <!-- 2. 無料講義でわかること -->
   <section class="pt">
     <h2 class="h2"><em>無料講義でわかること</em></h2>
     <div class="msg">
@@ -254,8 +224,8 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
     </div>
   </section>
 
-  <!-- 4. 実際にAIで事業を作った結果 -->
-  <section class="rs" style="background:#FAFAFA">
+  <!-- 3. 実際にAIで事業を作った結果 -->
+  <section class="rs">
     <h2 class="h2"><em>実際にAIで事業を作った結果...</em></h2>
     <div class="grp">
       <p class="gt">講師本人が、いまAIに任せていること</p>
@@ -286,8 +256,8 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
     </div>
   </section>
 
-  <!-- 5. 実践者の結果 -->
-  <section class="rs">
+  <!-- 4. 実践者の結果 -->
+  <section class="rs" style="background:#FAFAFA">
     <h2 class="h2"><em>同じ考え方を実践した方の結果</em></h2>
     <div class="grp">
       <ul>
@@ -317,7 +287,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
     </div>
   </section>
 
-  <!-- 6. 講師プロフィール -->
+  <!-- 5. 講師プロフィール -->
   <section class="pf">
     <h2 class="h2"><em>講師プロフィール</em></h2>
     <div class="head">
@@ -344,7 +314,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
     </ol>
   </section>
 
-  <!-- 7. ラストCTA -->
+  <!-- 6. ラストCTA -->
   <section class="last">
     <p class="cl">AIで事業を作る。自動化する。<br><b>そして、売却できる形へ。</b></p>
     <p style="text-align:center;font-size:clamp(15px,4.1vw,16.5px);line-height:1.9;color:#2A2A2A">3ステップで、<br>お金と時間の自由を目指しませんか？</p>
