@@ -29,9 +29,10 @@ section{padding:30px 28px}
 /* ---------- FV ---------- */
 .fv{padding-top:26px;padding-bottom:26px}
 .kicker{text-align:center;color:var(--ink);font-weight:900;
-  font-size:clamp(12.5px,3.3vw,15px);letter-spacing:.02em;margin-bottom:12px}
+  font-size:clamp(12.5px,3.7vw,17px);letter-spacing:0;margin-bottom:12px}
 .ask{text-align:center;color:var(--teal);font-weight:900;
   font-size:clamp(19px,4.9vw,27px);line-height:1.55;letter-spacing:-.01em}
+.fv .sub .wbr{display:none}
 .fv .sub{max-width:480px;margin:16px auto 0;text-align:center;font-weight:900;
   font-size:clamp(13px,3.4vw,15px);color:#333;line-height:1.85}
 
@@ -89,7 +90,7 @@ section{padding:30px 28px}
 .why .body b{font-weight:900;color:var(--teal-d)}
 
 /* ---------- 実績 / 実践者の結果 ---------- */
-.rs .h2{margin-bottom:20px}
+.rs .h2{margin-bottom:32px}
 .rs .grp{max-width:480px;margin:0 auto}
 .rs .gt{font-size:13px;font-weight:900;color:var(--ink);letter-spacing:.02em;margin:0 0 9px;
   border-left:4px solid var(--teal);padding-left:9px;line-height:1.5}
@@ -160,6 +161,9 @@ footer a{color:#BBB;text-decoration:none;border-bottom:1px solid #666}
 footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
 
 /* 小型端末（iPhone SE 等）でCTAの1行が収まるように */
+@media (max-width:365px){
+  .fv .sub .wbr{display:block}
+}
 @media (max-width:400px){
   section{padding:26px 16px}
   .btn{gap:6px;padding:16px 6px}
@@ -199,7 +203,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
         </div>
       </div>
     </div>
-    <p class="sub">無料オンライン講座を期間限定でプレゼント中</p>
+    <p class="sub">＼無料オンライン講座を<span class="wbr"></span>期間限定でプレゼント中／</p>
     <div class="entry">
       <a class="btn" href="#"><span class="ic">LINE</span><span>無料で今すぐ動画を受け取る</span></a>
     </div>
@@ -207,7 +211,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
 
   <!-- 2. なぜ -->
   <section class="why">
-    <h2 class="h2"><em>なぜ、AIで事業を作ると<br>自由を目指せるのか？</em></h2>
+    <h2 class="h2"><em>なぜ、AIで事業を作ると<br>お金と時間の自由を目指せるのか？</em></h2>
     <div class="body">
       <p class="q">AIを使えるようになって、収入や自由な時間が増えたか、思い返してみてください。</p>
       <ul>
