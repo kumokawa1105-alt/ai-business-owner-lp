@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIで事業を作る・自動化する・売却する｜無料オンライン講座</title>
+<meta name="description" content="AIで事業を作り、自動化・売却してきた実践者が教える無料オンライン講座を期間限定でプレゼント。">
+<style>
+:root{
+  --teal:#0798AA; --teal-d:#00778C;
+  --ink:#1A1A1A; --sub:#555;
+  --line:#06C755; --line-d:#049E44;
+  --bg:#fff; --gray:#F1F1F1; --w:700px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#DDD;color:var(--ink);
+  font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+  line-height:1.7;-webkit-text-size-adjust:100%}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:var(--w);margin:0 auto;background:var(--bg)}
+section{padding:30px 28px}
+
+/* ---------- 共通見出し ---------- */
+.h2{font-weight:900;line-height:1.5;letter-spacing:-.01em;text-align:center;
+  font-size:clamp(18px,4.6vw,25px);color:var(--ink)}
+.h2 em{font-style:normal;border-bottom:3px solid var(--teal);padding-bottom:2px}
+.lead{text-align:center;color:var(--teal-d);font-size:12px;font-weight:900;letter-spacing:.1em;margin-bottom:9px}
+
+/* ---------- FV ---------- */
+.fv{padding-top:26px;padding-bottom:26px}
+.kicker{text-align:center;color:var(--teal-d);font-weight:900;
+  font-size:clamp(12.5px,3.3vw,15px);letter-spacing:.02em;margin-bottom:12px}
+.ask{text-align:center;color:var(--teal);font-weight:900;
+  font-size:clamp(19px,4.9vw,27px);line-height:1.55;letter-spacing:-.01em}
+.fv .sub{max-width:480px;margin:16px auto 0;text-align:center;font-weight:900;
+  font-size:clamp(13px,3.4vw,15px);color:#333;line-height:1.85}
+
+/* FV デバイスモックアップ */
+.mock{position:relative;max-width:470px;margin:18px auto 0;padding-bottom:24px}
+.laptop{width:87%;margin:0 auto}
+.lid{background:#1E2229;border-radius:11px 11px 3px 3px;padding:9px 9px 11px;
+  box-shadow:0 14px 28px rgba(0,0,0,.28)}
+.lscreen{position:relative;aspect-ratio:16/10;border-radius:3px;overflow:hidden;background:#0B1A33}
+.lscreen>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.lbase{position:relative;left:-7.5%;width:115%;height:11px;
+  background:linear-gradient(#D2D7DE,#9AA1AB);border-radius:0 0 9px 9px}
+.lbase::after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);
+  width:16%;height:4px;background:#7E858F;border-radius:0 0 4px 4px}
+
+.tcard{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;line-height:1.15}
+.tcard .t1{color:#fff;font-weight:900;font-size:clamp(15px,6.4vw,26px);letter-spacing:-.02em;white-space:nowrap}
+.tcard .t2{color:#BFD6E6;font-weight:700;font-size:clamp(7px,2.5vw,11px);letter-spacing:.3em;
+  margin-top:7px;padding-left:.3em;white-space:nowrap}
+
+.phone{position:absolute;right:0;bottom:0;width:23%;max-width:112px;
+  background:#1E2229;border-radius:13px;padding:4px;box-shadow:0 10px 22px rgba(0,0,0,.32)}
+.pscreen{position:relative;aspect-ratio:9/19;border-radius:10px;overflow:hidden;background:#0B1A33}
+.pscreen>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.pscreen::before{content:"";position:absolute;z-index:2;left:50%;top:4px;transform:translateX(-50%);
+  width:34%;height:4px;border-radius:3px;background:#0A1420}
+.pcard{position:absolute;inset:0;z-index:1;display:flex;align-items:center;justify-content:center;padding:0 7%}
+.pframe{width:100%;border:1.5px solid rgba(255,255,255,.92);padding:11% 3%;
+  text-align:center;line-height:1.2}
+.pframe .p1{color:#fff;font-weight:900;font-size:clamp(7px,1.9vw,10px);
+  line-height:1.35;letter-spacing:-.02em}
+.pframe .p2{color:#BFD6E6;font-weight:700;font-size:clamp(4.5px,1.15vw,6px);
+  letter-spacing:.22em;margin-top:5px;padding-left:.22em;white-space:nowrap}
+
+/* ---------- CTA ---------- */
+.entry{max-width:480px;margin:18px auto 0;background:var(--gray);
+  border-radius:11px;padding:15px;text-align:center}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;
+  background:var(--line);color:#fff;text-decoration:none;font-weight:900;
+  font-size:clamp(12.5px,3.15vw,17px);padding:17px 8px;border-radius:9px;
+  box-shadow:0 5px 0 var(--line-d);letter-spacing:.01em}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 var(--line-d)}
+.btn .ic{height:21px;padding:0 6px;border-radius:6px;background:#fff;color:var(--line);
+  font-size:10.5px;font-weight:900;display:flex;align-items:center;justify-content:center;
+  flex:none;letter-spacing:.02em}
+
+/* ---------- WHY ---------- */
+.why{background:#FAFAFA}
+.why .body{max-width:480px;margin:20px auto 0;font-size:14px;line-height:1.95;color:#2A2A2A}
+.why .body p+p{margin-top:15px}
+.why .body .q{margin-bottom:15px}
+.why .body ul{list-style:none;margin:0 0 15px}
+.why .body ul li{padding-left:1em;text-indent:-1em}
+.why .body b{font-weight:900;color:var(--teal-d)}
+
+/* ---------- 実績 / 実践者の結果 ---------- */
+.rs .h2{margin-bottom:20px}
+.rs .grp{max-width:480px;margin:0 auto}
+.rs .gt{font-size:13px;font-weight:900;color:var(--ink);letter-spacing:.02em;margin:0 0 9px;
+  border-left:4px solid var(--teal);padding-left:9px;line-height:1.5}
+.rs li{list-style:none;display:flex;align-items:baseline;gap:12px;
+  border-bottom:1px solid #E3E3E3;padding:12px 2px}
+.rs li .w{font-size:13.5px;color:#2A2A2A;line-height:1.5}
+.rs li .m{margin-left:auto;color:var(--teal-d);font-weight:900;letter-spacing:-.02em;
+  font-size:clamp(19px,5vw,25px);white-space:nowrap}
+.rs li .m i{font-style:normal;font-size:.6em;margin-left:1px}
+.rs li .m.s{font-size:clamp(13.5px,3.6vw,16px);letter-spacing:0}
+.rs li.ev{display:block;padding:16px 2px}
+.rs li.ev .hd{display:flex;align-items:baseline;gap:12px}
+.rs li.ev figure{margin-top:11px;border:1px solid #E3E3E3;border-radius:8px;overflow:hidden;background:#fff}
+.rs li.ev figure img{width:100%}
+.rs li.ev figcaption{font-size:11px;color:#888;padding:7px 10px;line-height:1.5;
+  background:#FAFAFA;border-top:1px solid #ECECEC}
+.rs li.own{flex-direction:column;align-items:flex-start;gap:2px}
+.rs li.own .txt{display:flex;flex-direction:column;gap:2px}
+.rs li.own .m{margin-left:0;line-height:1.3}
+.rs li.own .w{color:#666;font-size:12.5px}
+.rs li.own.ph figure{margin-top:11px;width:100%;max-width:236px;border:1px solid #E3E3E3;
+  border-radius:8px;overflow:hidden;background:#fff}
+.rs li.own.ph figcaption{font-size:11px;color:#888;padding:7px 10px;line-height:1.5;
+  background:#FAFAFA;border-top:1px solid #ECECEC}
+.rs .note{font-size:12px;color:#777;line-height:1.8;margin:16px auto 0;max-width:480px}
+
+/* ---------- 無料講義でわかること ---------- */
+.pt .h2{margin-bottom:20px}
+.pt ul{list-style:none;max-width:480px;margin:0 auto}
+.pt li{position:relative;padding:11px 2px 11px 38px;border-bottom:1px solid #E3E3E3}
+.pt li:last-child{border-bottom:0}
+.pt li::before{content:"";position:absolute;left:0;top:14px;width:24px;height:24px;
+  border-radius:50%;background:var(--teal)}
+.pt li::after{content:"";position:absolute;left:8.5px;top:19px;width:6px;height:11px;
+  border-right:2.5px solid #fff;border-bottom:2.5px solid #fff;transform:rotate(45deg)}
+.pt li p{font-size:14px;line-height:1.9;color:#2A2A2A;font-weight:700}
+.pt .msg{max-width:480px;margin:0 auto 24px;font-size:14px;line-height:1.95;color:#2A2A2A}
+.pt .msg p+p{margin-top:15px}
+.pt .msg b{font-weight:900;color:var(--teal-d)}
+
+/* ---------- profile ---------- */
+.pf{background:#FAFAFA}
+.pf .h2{margin-bottom:20px}
+.pf .head{display:flex;gap:16px;align-items:flex-end;
+  border-bottom:3px solid var(--teal);padding-bottom:14px}
+.pf .head img{width:100px;height:125px;object-fit:cover;border-radius:6px;flex:none}
+.pf .role{font-size:12.5px;font-weight:700;color:var(--sub)}
+.pf .name{font-size:clamp(24px,5.4vw,31px);font-weight:900;letter-spacing:.02em;line-height:1.25}
+.pf .body{margin-top:20px;font-size:14px;line-height:1.95;color:#2A2A2A}
+.pf .body p+p{margin-top:15px}
+.pf h4{margin-top:24px;font-size:13px;font-weight:900;color:var(--teal);letter-spacing:.08em}
+.pf ol{list-style:none;margin-top:11px}
+.pf ol li{font-size:13.5px;line-height:1.6;padding:8px 0 8px 20px;
+  border-bottom:1px solid #E3E3E3;position:relative}
+.pf ol li::before{content:"";position:absolute;left:4px;top:15px;width:7px;height:7px;
+  border-radius:50%;background:var(--teal)}
+
+/* ---------- last CTA ---------- */
+.last{background:var(--gray)}
+.last .cl{text-align:center;font-weight:900;line-height:1.55;
+  font-size:clamp(16px,4.2vw,22px);letter-spacing:-.01em;margin-bottom:14px}
+.last .cl b{color:var(--teal-d)}
+.last .entry{margin-top:0;background:#fff}
+
+footer{background:#2B2B2B;color:#BBB;text-align:center;font-size:12px;
+  padding:24px 20px 28px;line-height:2}
+footer a{color:#BBB;text-decoration:none;border-bottom:1px solid #666}
+footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
+
+/* 小型端末（iPhone SE 等）でCTAの1行が収まるように */
+@media (max-width:400px){
+  section{padding:26px 16px}
+  .btn{font-size:12px;gap:6px;padding:16px 6px}
+  .btn .ic{font-size:10px;padding:0 5px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. FV -->
+  <section class="fv">
+    <p class="kicker">AIで事業を作り、自動化・売却してきた実践者が教える</p>
+    <h1 class="ask">AIで事業を作る／自動化する／売却する<br>3ステップで、<br>お金と時間の自由を目指しませんか？</h1>
+    <div class="mock">
+      <div class="laptop">
+        <div class="lid">
+          <div class="lscreen">
+            <img src="images/fv-thumb.jpg" alt="">
+            <div class="tcard">
+              <div class="t1">AIで事業を作る</div>
+              <div class="t2">無料オンライン講座</div>
+            </div>
+          </div>
+        </div>
+        <div class="lbase"></div>
+      </div>
+      <div class="phone">
+        <div class="pscreen">
+          <img src="images/phone-bg.jpg" alt="">
+          <div class="pcard">
+            <div class="pframe">
+              <div class="p1">AIで<br>事業を作る</div>
+              <div class="p2">無料オンライン講座</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="sub">無料オンライン講座を期間限定でプレゼント中</p>
+    <div class="entry">
+      <a class="btn" href="#"><span class="ic">LINE</span><span>無料で今すぐ動画を受け取る</span></a>
+    </div>
+  </section>
+
+  <!-- 2. なぜ -->
+  <section class="why">
+    <h2 class="h2"><em>なぜ、AIで事業を作ると<br>自由を目指せるのか？</em></h2>
+    <div class="body">
+      <p class="q">AIを使えるようになって、収入や自由な時間が増えたか、思い返してみてください。</p>
+      <ul>
+        <li>・ChatGPTで文章を作れる</li>
+        <li>・画像や動画、資料も作れる</li>
+        <li>・以前より仕事が速くなった</li>
+      </ul>
+      <p>それなのに「選択肢が増え、逆にやることが増えた」「結局、自分が動かないと何も進まない」。このように感じている方も多いのではないでしょうか。</p>
+      <p>そして、AIを使って作業が速くなっても、自分がすべての仕事を抱えていれば、休んだ分だけ事業は止まってしまいます。</p>
+      <p>自由を目指すために必要なのは、<b>AIの操作をさらに覚えることではありません。AIを使って、利益を生み出す事業そのものを作ることです。</b></p>
+      <p>AIに役割と判断基準を渡せば、文章や画像の作成だけでなく、仕事の流れそのものを任せられるようになります。</p>
+      <p><b>つまり「自分が働く」から「AIと仕組みに働いてもらう」へ、事業の動かし方そのものを変えられるのです。</b></p>
+      <p>さらに、自分がいなくても事業が回り、他者へ引き継げる状態まで整えれば、<b>事業を売却するという選択肢</b>も生まれます。</p>
+    </div>
+  </section>
+
+  <!-- 3. AIで事業を作った結果 -->
+  <section class="rs">
+    <h2 class="h2"><em>実際にAIで事業を作った結果...</em></h2>
+    <div class="grp">
+      <p class="gt">講師本人が、いまAIに任せていること</p>
+      <ul>
+        <li class="own">
+          <span class="m">AIエージェント<i>12人</i></span>
+          <span class="w">で、複数のYouTubeチャンネルを運営しています</span>
+        </li>
+        <li class="own ph">
+          <span class="txt">
+            <span class="m s">YouTubeの銀の盾を受賞</span>
+            <span class="w">AIを「便利な道具」で終わらせず、事業として運営した結果です</span>
+          </span>
+          <figure>
+            <img src="images/silver-play-button.jpg" alt="YouTubeから届いた銀の盾">
+            <figcaption>実際に届いた盾です。</figcaption>
+          </figure>
+        </li>
+        <li class="ev">
+          <div class="hd"><span class="w">チャンネルの累計視聴回数</span><span class="m">1.1<i>億</i></span></div>
+          <figure>
+            <img src="images/youtube-analytics.jpg" alt="視聴回数1.1億、総再生時間164.7万時間、チャンネル登録者+5.7万を示すYouTubeアナリティクス画面">
+            <figcaption>実際のYouTubeアナリティクス画面です（総再生時間164.7万時間／登録者+5.7万）。</figcaption>
+          </figure>
+        </li>
+      </ul>
+      <p class="note">※掲載内容は講師本人の実績です。将来の成果を保証するものではありません。</p>
+    </div>
+  </section>
+
+  <!-- 4. 実践者の結果 -->
+  <section class="rs" style="background:#FAFAFA">
+    <h2 class="h2"><em>同じ考え方を実践した方の結果</em></h2>
+    <div class="grp">
+      <ul>
+        <li class="ev">
+          <div class="hd"><span class="w">LINEスタンプの制作で</span><span class="m">20<i>万円</i></span></div>
+          <figure>
+            <img src="images/voice-01-line-stamp.png" alt="LINEスタンプの収益が20万円を突破したという報告のLINE画面">
+            <figcaption>ご本人から届いた報告です。</figcaption>
+          </figure>
+        </li>
+        <li class="ev">
+          <div class="hd"><span class="w">ホームページの受注で</span><span class="m">90<i>万円</i></span></div>
+          <figure>
+            <img src="images/voice-02-coconala.png" alt="Webサイトの受注で90万円の入金があったという報告のLINE画面">
+            <figcaption>ご本人から届いた報告です。</figcaption>
+          </figure>
+        </li>
+        <li class="ev">
+          <div class="hd"><span class="w">ゲーム制作で</span><span class="m">25<i>万円</i></span></div>
+          <figure>
+            <img src="images/voice-04-game.png" alt="ゲーム制作についてのやりとりのLINE画面">
+            <figcaption>ご本人から届いた報告です。</figcaption>
+          </figure>
+        </li>
+      </ul>
+      <p class="note">※実践者の成果事例です。結果には個人差があり、同様の成果を保証するものではありません。</p>
+    </div>
+  </section>
+
+  <!-- 5. 無料講義でわかること -->
+  <section class="pt">
+    <h2 class="h2"><em>無料講義でわかること</em></h2>
+    <div class="msg">
+      <p>AIの操作を教えられる人は、いまやたくさんいます。</p>
+      <p>ただ、<b>実際にAIで事業を立ち上げ、自動化し、売却まで経験した人はほとんどいません</b>。</p>
+      <p>この講義では、その一連を通ってきた立場から、どの順番で何を決めればいいのかをそのままお話しします。</p>
+      <p>以下、この講義でわかることのほんの一部です。</p>
+    </div>
+    <ul>
+      <li><p>AIを学んでも収益が増えない本当の理由</p></li>
+      <li><p>AIで作業する人と、AIで事業を作る人の違い</p></li>
+      <li><p>事業を作る → 自動化する → 売却する、3ステップの全体像</p></li>
+      <li><p>自分が張り付かなくても利益が回る仕組みの作り方</p></li>
+      <li><p>AI事業に買い手がつく条件</p></li>
+      <li><p>経験や強みがなくても始められる3つの入口</p></li>
+    </ul>
+    <div class="entry">
+      <a class="btn" href="#"><span class="ic">LINE</span><span>無料で今すぐ動画を受け取る</span></a>
+    </div>
+  </section>
+
+  <!-- 6. 講師プロフィール -->
+  <section class="pf">
+    <h2 class="h2"><em>講師プロフィール</em></h2>
+    <div class="head">
+      <img src="images/suya.jpg" alt="SUYA（兼子 慧介）">
+      <div>
+        <div class="role">Xeno magic株式会社 代表取締役</div>
+        <div class="name">SUYA（兼子 慧介）</div>
+      </div>
+    </div>
+    <div class="body">
+      <p>今はAIエージェント12人で複数のYouTubeチャンネルを運営していて、顔出しも撮影もしないまま銀の盾を受け取りました。動画の企画も台本も編集も、指示を出した先でAIが進めています。</p>
+      <p>そこに至るまでには回り道がありました。東京大学の数学科を卒業して在学中に起業し、その後は連続起業家が立ち上げた会社に参画して、約7億円での売却まで一緒に持っていきました。次はスタートアップへの投資に携わりましたが、そこで壁にぶつかります。勝ち筋は分かっているのに、必要なコストが高すぎて、誰にでもできる方法にはならなかったからです。ここ数年のAIの進化で、その壁は消えました。だから今は、同じやり方を未経験の方にそのまま渡しています。</p>
+    </div>
+    <h4>PROFILE</h4>
+    <ol>
+      <li>開成中学・高校を経て、東京大学数学科を卒業</li>
+      <li>在学中に起業</li>
+      <li>連続起業家が立ち上げた会社に参画し、約7億円での売却を経験</li>
+      <li>スタートアップへの投資業務に従事</li>
+      <li>Xeno magic株式会社を設立</li>
+      <li>AIエージェント12人で複数のYouTubeチャンネルを運営し、銀の盾を受賞</li>
+      <li>前年年商3億円超を達成</li>
+      <li>Anthropic Academyの公開13講座をすべて修了</li>
+    </ol>
+  </section>
+
+  <!-- 7. ラストCTA -->
+  <section class="last">
+    <p class="cl">AIで事業を作る。自動化する。<br><b>そして、売却できる形へ。</b></p>
+    <p style="text-align:center;font-size:14px;line-height:1.9;color:#2A2A2A">3ステップで、<br>お金と時間の自由を目指しませんか？</p>
+    <div class="entry">
+      <a class="btn" href="#"><span class="ic">LINE</span><span>無料で今すぐ動画を受け取る</span></a>
+    </div>
+  </section>
+
+  <footer>
+    AI BUSINESS OWNER<br>
+    <a href="https://xenomagic.com/tokushoho.html" target="_blank" rel="noopener">特定商取引法に基づく表記</a> ｜
+    <a href="https://xenomagic.com/privacy.html" target="_blank" rel="noopener">プライバシーポリシー</a>
+    <span class="cp">© 2026 All Rights Reserved.</span>
+  </footer>
+
+</div>
+</body>
+</html>
