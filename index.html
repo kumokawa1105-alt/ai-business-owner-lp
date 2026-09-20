@@ -32,8 +32,8 @@ section{padding:30px 28px}
   font-size:clamp(12.5px,3.4vw,16px);letter-spacing:0;margin-bottom:12px}
 .ask{text-align:center;color:var(--teal);font-weight:900;
   font-size:clamp(19px,4.9vw,27px);line-height:1.55;letter-spacing:-.01em}
-.fv .sub .wbr{display:none}
-.fv .sub{max-width:480px;margin:16px auto 0;text-align:center;font-weight:900;
+.sub .wbr{display:none}
+.sub{max-width:480px;margin:24px auto 0;text-align:center;font-weight:900;
   font-size:clamp(13px,3.4vw,15px);color:#333;line-height:1.85}
 
 /* FV デバイスモックアップ */
@@ -71,7 +71,8 @@ section{padding:30px 28px}
 /* ---------- CTA ---------- */
 .entry{max-width:480px;margin:18px auto 0;background:var(--gray);
   border-radius:11px;padding:15px;text-align:center}
-.fv .entry{margin-top:9px}
+.fv .sub{margin-top:16px}
+.sub + .entry{margin-top:9px}
 .btn{display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;
   background:var(--line);color:#fff;text-decoration:none;font-weight:900;
   font-size:clamp(14px,4.4vw,19px);padding:17px 8px;border-radius:9px;
@@ -123,7 +124,7 @@ section{padding:30px 28px}
 .pt .hl{background:linear-gradient(transparent 58%,#FFE97F 58%);padding:0 1px}
 .pt .msg{max-width:480px;margin:0 auto 24px;font-size:clamp(15px,4.1vw,16.5px);line-height:1.95;color:#2A2A2A}
 .pt .msg p+p{margin-top:15px}
-.pt .msg b{font-weight:900;color:var(--teal-d)}
+.pt .msg b{font-weight:900;color:var(--ink)}
 
 /* ---------- profile ---------- */
 .pf .h2{margin-bottom:20px}
@@ -155,7 +156,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
 
 /* 小型端末（iPhone SE 等）でCTAの1行が収まるように */
 @media (max-width:365px){
-  .fv .sub .wbr{display:block}
+  .sub .wbr{display:block}
 }
 @media (max-width:400px){
   section{padding:26px 16px}
@@ -219,6 +220,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
       <li><p><span class="hl">AI事業に買い手がつく条件</span></p></li>
       <li><p><span class="hl">経験や強みがなくても始められる3つの入口</span></p></li>
     </ul>
+    <p class="sub">＼無料オンライン講座を<span class="wbr"></span>期間限定でプレゼント中／</p>
     <div class="entry">
       <a class="btn" href="#"><span class="ic">LINE</span><span>無料で今すぐ動画を受け取る</span></a>
     </div>
@@ -318,6 +320,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
   <section class="last">
     <p class="cl">AIで事業を作る。自動化する。<br><b>そして、売却できる形へ。</b></p>
     <p style="text-align:center;font-size:clamp(15px,4.1vw,16.5px);line-height:1.9;color:#2A2A2A">3ステップで、<br>お金と時間の自由を目指しませんか？</p>
+    <p class="sub">＼無料オンライン講座を<span class="wbr"></span>期間限定でプレゼント中／</p>
     <div class="entry">
       <a class="btn" href="#"><span class="ic">LINE</span><span>無料で今すぐ動画を受け取る</span></a>
     </div>
