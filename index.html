@@ -28,6 +28,7 @@ section{padding:30px 28px}
 
 /* ---------- FV ---------- */
 .fv{padding-top:26px;padding-bottom:26px}
+.kicker .kbr{display:none}
 .kicker{text-align:center;color:var(--ink);font-weight:900;
   font-size:clamp(12.5px,3.4vw,16px);letter-spacing:0;line-height:1.6;
   max-width:600px;margin:0 auto 14px}
@@ -128,6 +129,10 @@ footer a{color:#BBB;text-decoration:none;border-bottom:1px solid #666}
 footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
 
 /* 小型端末（iPhone SE 等）でCTAの1行が収まるように */
+/* 2行目が1行に収まらない幅では、意味の切れ目で3行に分ける */
+@media (max-width:615px){
+  .kicker .kbr{display:block}
+}
 @media (max-width:365px){
   .sub .wbr{display:block}
 }
@@ -143,7 +148,7 @@ footer .cp{display:block;margin-top:6px;font-size:11px;color:#8A8A8A}
 
   <!-- 1. FV -->
   <section class="fv">
-    <p class="kicker">会社を7億円で売却（証拠あり）。<br>今はAIエージェント12人を使って自動で事業を回している東大卒講師が語る</p>
+    <p class="kicker">会社を7億円で売却（証拠あり）。<br>今はAIエージェント12人を使って<span class="kbr"></span>自動で事業を回している東大卒講師が語る</p>
     <h1 class="ask">AIで事業を作る／自動化する／売却する<br>3ステップで、<br>お金と時間の自由を目指しませんか？</h1>
     <div class="mock">
       <div class="laptop">
